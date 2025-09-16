@@ -1,0 +1,53 @@
+Here I will write some basic rules and things in C language :-
+--------------------------------------------------------------
+
+BASICS OF C :-
+--------------
+
+1. variable name kabhe bhe number is start nahe hoge or special character or keyword use nahe honge
+   FLOAT, _Manu, M_anu, MAYANK ye sab valid hai 
+
+2. float/int -> float float/float -> float int/float -> float int/int -> int (3/4 = 0)
+   agar float - int kar rahe ho toh internally jo int var hai usee alag se float mae store krke result float mae dega *GIF [.] ques*
+   Float -> sirf 6 decimal place tak accurate hai (0.123456) 
+
+3. &x ->  address of variable x in scanf
+
+4. printf -> mae spaces bhe consider hote hai double quotes ke ander 
+
+5. Modulo Operator
+    2 % x = 2 ( x > 2 )
+    a % b = a ( a < b )
+
+    2 % -8 = 2
+
+6. Hierarchy or operators:-
+    B, O, %, D/M, A/S Left -> Right in /*
+
+7. char data type (1 byte) .... %C, single digit -> 'a', 'ab' *wrong
+    ASCII(American Standard Code for Information Interchange) -> 'A' = 65 'a' = 97
+
+8. int vs short vs long (4 bytes vs 2 bytes vs 8 bytes) ..... kind of range of floating point representation* 
+    n bits -> 2^n  numbers store kr skte ho
+    short range -> -32768 to 32767 (-2^15 to 2^15-1)
+    int range -> -2^31 to 2^31-1
+    long long range -> -2^63 to 2^62-1
+    float -> 4 byte Standard
+
+
+IF/ESE :- (control statements/conditionals)
+-------------------------------------------
+
+1. If we want to to find the number div by 5 or 3 without using logical && then we can use nested if-else conditions
+
+2. Hierarchy or operators:-
+    && > || Ex: if( n%5==0 || n%3==0 && n%15!=0 )
+                             |-----------------| ye code phele chalega due to higher preference that's why we use brakets () for correct output, then brackets will be executed first !              
+
+3. if(condition) 
+        printf("......")  If there is single statement to print then we can remove curly braces.
+
+4. If there is only 2 conditions to check then if-else is sufficient.
+
+5. agar if ke lader use kroge toh saare if conditions check hote hai, else if lader use krne par agar ek bhe condition hit kar gae toh next condition check nahe hoge.
+
