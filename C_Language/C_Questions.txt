@@ -1,0 +1,125 @@
+Q1 : What is tokens in C ?
+
+In C programming, tokens are the smallest individual units of a program that are meaningful to the compiler. They are the fundamental building blocks from which all C programs are constructed. Think of them like the words and punctuation marks that form sentences in a natural language; without them, the compiler cannot understand the program's structure or intent.
+
+There are six main types of tokens in C:
+
+Keywords: These are reserved words in C that have predefined meanings and cannot be used for any other purpose, such as variable names. Examples include int, if, while, for, return, void, etc.
+
+Identifiers: These are names given by the programmer to various program elements like variables, functions, arrays, structures, etc. They must follow specific naming rules (e.g., start with a letter or underscore, contain letters, digits, or underscores). Examples include main, totalSum, myVariable.
+
+Constants: These are fixed values that do not change during the execution of a program. They can be of various types: 
+Integer constants: 10, 0x2A (hexadecimal), 021 (octal)
+Floating-point constants: 3.14, 2.5f
+Character constants: 'a', '\\n' (newline character)
+String literals: "Hello, World!"
+
+Operators: These are symbols that perform operations on operands (variables or constants). Examples include:
+Arithmetic operators: +, -, *, /, %
+Relational operators: ==, !=, <, >, <=, >=
+Logical operators: &&, ||, !
+Assignment operator: =
+
+Special Symbols (Punctuators): These are symbols that have specific structural or organizational roles in the C language. Examples include:
+Parentheses () (for function calls, expressions)
+Curly braces {} (for code blocks)
+Square brackets [] (for arrays)
+Comma , (to separate items)
+Semicolon ; (to terminate statements)
+Hash # (for preprocessor directives)
+
+Strings: These are sequences of characters enclosed in double quotes, representing text. While technically a type of constant (string literal), they are often treated as a distinct category due to their frequent use and specific handling. Example: "This is a string."
+
+
+Q2 : why in latest c language or version the best practice is we write int main means the main function return the int value but if we just print a single thing we have to write return 0; in the end why we do this istead just write void main() so we don't have to return 0 in the end ?
+
+🧠 1. What actually happens when your program runs
+
+When you run a C program, it is executed by the operating system (OS).
+After your program finishes, the OS expects your program to return a value — this value tells the OS whether the program ran successfully or not.
+
+That’s why the C standard defines:
+
+int main(void)
+
+
+or
+
+int main(int argc, char *argv[])
+
+
+The int means:
+
+“When I finish, I’ll give an integer back to the operating system.”
+
+✅ 2. Why return 0; is written
+
+In C:
+
+return 0; → means successful execution
+
+Any non-zero value (like return 1;) → means error or abnormal exit
+
+So when you write:
+
+int main(void) {
+    printf("Hello");
+    return 0;
+}
+
+
+you are politely telling the OS:
+
+“I finished properly — no errors happened.”
+
+It’s part of standard, portable, professional code.
+
+💡 3. What if you don’t write return 0;?
+
+In modern C standards (C99 and later), if you don’t explicitly write return 0;, the compiler automatically assumes it for main().
+So this is valid and equivalent:
+
+int main(void) {
+    printf("Hello");
+} 
+
+
+✅ It will still return 0 implicitly.
+So adding return 0; is just good habit, for clarity and portability.
+
+🚫 4. Why not void main()?
+
+While void main() may work on some compilers, it is not standard C.
+The C standard (ISO C99 and later) only allows:
+
+int main(void)
+int main(int argc, char *argv[])
+
+
+That’s it.
+
+Using void main() can:
+
+cause undefined behavior on some systems,
+
+break portability,
+
+confuse the OS because it expects an integer return value.
+
+🔍 5. Summary
+Version	Allowed main forms	Return rule
+C89/C90	int main() or int main(int argc, char *argv[])	Must explicitly return 0
+C99+	Same as above	return 0; auto-added if omitted
+void main()	❌ Non-standard	Avoid using it
+✅ In short:
+
+Always use
+
+int main(void)
+{
+    printf("Hello, World!");
+    return 0;
+}
+
+
+even if it seems unnecessary — because it’s standard, portable, and clearly communicates program success.

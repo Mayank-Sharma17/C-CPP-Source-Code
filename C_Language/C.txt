@@ -1,5 +1,5 @@
-Here I will write some basic rules and things in C language :-
---------------------------------------------------------------
+Here I will write some basic rules and important points to remember in C language :- QUICK REVISION
+---------------------------------------------------------------------------------------------------
 
 BASICS OF C :-
 --------------
@@ -12,7 +12,10 @@ BASICS OF C :-
    Float -> sirf 6 decimal place tak accurate hai (0.123456) 
 
 3. &x ->  address of variable x in scanf
+    NOTE:- scanf is designed to skip any whitespace (spaces, tabs, newlines) before it reads each input — but not after.
 
+           When you add a space at the end of the format string (like " %d %d "), it tells scanf to expect more input, because it’s waiting to match that whitespace with something — usually a non-whitespace character.
+ 
 4. printf -> mae spaces bhe consider hote hai double quotes ke ander 
 
 5. Modulo Operator
@@ -51,3 +54,84 @@ IF/ESE :- (control statements/conditionals)
 
 5. agar if ke lader use kroge toh saare if conditions check hote hai, else if lader use krne par agar ek bhe condition hit kar gae toh next condition check nahe hoge.
 
+6. TERNARY OPERATOR
+
+    exp1 ? exp2 : exp3 --> condition ? if true : else false
+    Ex: n%2==0 ? printf("Even number") : printf("Odd number") ; (rewrite if-else in 1 line)
+
+7. Type Promotion/ Conversion :-
+
+    int a = 3;
+    float b = 2.5;
+    float result = a + b; // 'a' is promoted to float here
+
+    if (a == b) // a is int, b is float
+    a is promoted to float for the comparison. (Implicit Conversion)
+
+8. Boolean Datatype :-
+    bool x --> ture/false --> 1/0
+
+NOTE : In C, assignment operators always associate from right to left.
+
+        a = (b = (c = 5));
+
+        c = 5 → assigns 5 to c, returns 5.
+
+        b = 5 → assigns 5 to b, returns 5.
+
+        a = 5 → assigns 5 to a.
+
+
+LOOPS :- (for, while, do while) DRY -> DO NOT REPEAT YOURSELF
+-------------------------------------------------------------
+
+1. FOR LOOP :-
+    for(initialization; condition; increment/decrement){
+        // code
+    };
+    i++ --> i=i+1
+    i+=2 --> i=i+2
+
+2. BREAK & CONTINUE STATEMENT :-
+    prime&composite no --> use of 'break' :- It is used to terminate the loop.
+
+    use of 'continue' :- It is used to skip that particular iteration of the loop. (update - i++)
+
+3. WHILE LOOP :- Best for Unknown Iteration Count
+    initialization
+    while(condition) { // jab hamne jyada cheeze na pata ho tab use kro 
+        updation
+    }
+
+   int j; // by default j ke ander garbage value hote hai/ random value 
+
+4. post/pre increment :-
+    x++ --> post increment --> use x, then increment
+    ++x --> pre increment --> first increment, then use x
+
+    int x = 4, y, z; -----> 4 _ _
+    y = --x; // 3 3 _
+    z = x--; // 2 3 3
+
+5. DO-WHILE LOOP :- // ek baar to chalega he chalega irrespective of the condition.
+    do {
+        //code
+    } while(condition);
+ 
+6. TYPECASTING :-
+    int x = 65;
+    printf("%d", x); // output - 65
+    char ch = (char)x; // this is typecasting
+    printf("%c", ch); // output - A
+
+7. NOTE: The pow() function returns a double. In C, the function pow(base, exponent) returns a double, which is a floating-point number.   Due to the inherent inaccuracy of floating-point math.
+    Floating-point truncation --> 152.999 becomes 152 if directly cast
+
+
+PATTERS :- 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+1. Check no. of lines
+2. In each line what is happening (check how many times a pattern or number we have to print)
+3. then use maths and check the relation between the input number and the row and col (n, i, j), use extra var if needed
+4. figur it out !
