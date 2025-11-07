@@ -21,9 +21,9 @@ int main()
 
     if (n == 1)
         printf("1 is neither prime nor composite");
-    else if (flag == 1)
+    else if (flag == 0)
         printf("the given number is prime\n");
-    else
+    else // flag == 1
         printf("the given number is composite\n");
 
     return 0;

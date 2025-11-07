@@ -135,3 +135,26 @@ PATTERS :-
 2. In each line what is happening (check how many times a pattern or number we have to print)
 3. then use maths and check the relation between the input number and the row and col (n, i, j), use extra var if needed
 4. figur it out !
+
+FUNCTIONS & POINTERS :-
+------------------------
+
+1. Helps to avoid repititive code.
+2. It helps use to implement functional programming.
+3. Improves code reusability
+4. PASS BY VALUE & PASS BY REFERENCE :- 
+    When we swap two numbers inside the main function, it works easily because we directly change the variables.
+
+    But when we pass these two numbers to a function using pass by value, the function only receives copies of those variables — not the actual variables themselves.
+    So any change inside that function affects only the copies, not the original values in main().
+
+    That’s why, to actually swap the original numbers, we use pass by reference (in C, this is done using pointers *).
+    By passing the addresses of the variables, the function can directly modify their values in memory.
+
+5. FORMAL PARAMETERS AND ACTUAL PARAMETERS :-
+    In main function swap(a, b); calling a function in which a and b for formal parameters and their value is actual parameters.
+
+6. POINTERS* 
+    %p --> we can print address (printf("%d", &a))
+    With the help of pointers we can actually change the value of the variable whose address is stored in the pointer itself
+    swap(&a, &b) --> pass by reference we are passing addresses instead of values.
