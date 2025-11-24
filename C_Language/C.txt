@@ -158,3 +158,46 @@ FUNCTIONS & POINTERS :-
     %p --> we can print address (printf("%d", &a))
     With the help of pointers we can actually change the value of the variable whose address is stored in the pointer itself
     swap(&a, &b) --> pass by reference we are passing addresses instead of values.
+
+RECURSION :-
+---------------------------------------------------
+
+Function calling itself
+
+Recursion is a technique where a function calls itself to solve a problem.
+
+A recursive solution breaks a big problem into smaller subproblems of the same type.
+
+Every recursive function must have:
+    Base Case → the condition where the recursion stops.
+    Recursive Case → the part where the function calls itself.
+
+Without a base case, recursion leads to infinite calls and stack overflow.
+
+Recursion is useful for problems like:
+    factorial, Fibonacci
+    tree/graph traversal
+    divide & conquer algorithms (merge sort, quick sort)
+
+Often simpler to write but may use more memory than iterative solutions because of the call stack.
+
+function factorial(n):
+    if n == 0:          // Base case
+        return 1
+    else:
+        return n * factorial(n - 1)   // Recursive case
+
+ARRAYS :- 1D & 2D
+-----------------
+
+1. Collection of objects of similar data types.
+2. 0 based indexing.
+3. continous memory allocation. (but in normal address allocation of the variable it will randomly allocate memory there is not relation in that)
+4. index out of bound error --> if you access the wrong index or more than the size of the array
+5. num[n] --> we got (n+1)th element 
+6. Garbage Values --> in we didn't initialize variables and arrays in C, there will be some garbage value sotred in it.
+7. *PASSING ARRAY IN A FUNCTION --> if we pass an array as an argument in a function it will be passed by reference. (in all c, cpp, java)
+8. Address of the array is the address of the first element of the array.
+9. *Reverse the array --> 2 var/pointers i=0 and j=arrysize and then swap i and j till i<j
+
+10. 2D ARRAY --> GRID/MATRIX
