@@ -200,4 +200,60 @@ ARRAYS :- 1D & 2D
 8. Address of the array is the address of the first element of the array.
 9. *Reverse the array --> 2 var/pointers i=0 and j=arrysize and then swap i and j till i<j
 
+10. #include<limits.h> --> to use min and max number --> INT_MIN & INT_MAX 
+
 10. 2D ARRAY --> GRID/MATRIX
+
+STRINGS :-
+---------------------
+
+1. character arrays
+2. char take 1 byte of storage 
+3. ASCII values --> 'A' - 65  'a' - 97
+                    '0' - 48  '9' - 57
+4. NULL CHARACTER --> \0  and its ascii value is 0 (zero), and it can't be printed like other chars but it still exist.
+5. char str[] = "Mayank Sharma" -->  computer end mae \0 laga deta hai jab vo char array mae store hota hai.
+   char str[] = {'H', 'e','l','l','o'}; isme nahe krta, tumhe khud end mae '\0' lagana padega if you don't want to calculate size
+   char str[10] = "MCA" --> storage wastage hai but fir bhe chalega 
+
+6. Initializing string without size --> char arr[] = "Mayank" size of this string is 7 --> 6 char + 1 '\0'
+
+7. str[i] = i[str] = *(str + i) = *(i + str) sab same hai
+
+8. built in c functions --> #include<string.h>
+                            char str[] = "manu";
+                            printf("%s", str); 
+                            puts(str); // this will print the same str
+   puts("Hello this puts consider everything inside double quotes as a string"); 
+
+   NOTE : puts() --> automatically \n dedeta hai (next line)
+
+9. Input/Output in Strings :- gets() and puts()
+    scanf("%[^\n]s", str); // only the first word will be considered --> %[^\n]s this will work for entire sentence
+
+    taking using using gets()
+    gets(str); // entire sentence can be input
+
+NOTE :- kise bhe character array ka, array ka, string ka address uske phele ke 0th index ke element ka address hota hai!
+        ptr --> stands for address, *ptr --> value/char fetch krskte hai
+
+10. we get another way of initilizing strings
+    character's pointer can also be used to store address of a string
+    NOTE :- such direct initlization using pointers result in a read-only memory allocation of character arrays and hence, causes undefined behaviour when we try to change the individual characters.
+    
+    char *ptr = "programming";
+
+    memory ----> programming
+                 |
+                 ^
+                ptr (no name of the string in the memory but it is pointing to only first char of the string)   
+                        
+    printf("%s", ptr); // working
+    ptr[0] = 'm' // ERROR!
+
+    char str[] = "programming";
+    printf("%s", ptr); // working
+    str = "coding"; // ERROR!
+
+    In normal initilization, we can modify individual characters but not the entire string.
+    In pointer initialization, we can modify the entire string but not the individual characters.
