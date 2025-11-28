@@ -257,3 +257,17 @@ NOTE :- kise bhe character array ka, array ka, string ka address uske phele ke 0
 
     In normal initilization, we can modify individual characters but not the entire string.
     In pointer initialization, we can modify the entire string but not the individual characters.
+
+
+STRUCTURES :-
+------------------------------------------------------
+
+1. user defined datatype.
+2. collection of values of different data types.
+3. saves use from creating too many variables
+4. structure call by value se function mae pass hote hai
+
+typedef -> keyword in C is used to create an alias or synonym for an existing data type, simplifying complex declarations and improving code readability.
+ It allows programmers to define new names for existing types, such as int, struct, union, or pointers, making the code more descriptive and easier to maintain.
+ For example, typedef int Integer; creates an alias Integer for int, so variables can be declared as Integer a, b; instead of int a, b;.
+ It is especially useful with structures and pointers; for instance, typedef struct { int data; } Node; allows declaring Node n; instead of struct { int data; } n;.
