@@ -21,7 +21,7 @@ public:
 
     void getSecretPassword()
     {
-        cout<<"The secret password of employee is "<<this->secretPassword;
+        cout << "The secret password of employee is " << this->secretPassword;
     }
 
 private: // ander ke public functions hai vo private var ko acess krskte hai
@@ -30,8 +30,8 @@ private: // ander ke public functions hai vo private var ko acess krskte hai
 
 class Programmer : public Employee // inhertance
 {
-    public:
-        int errors; // base class ke sare properties in programmer class
+public:
+    int errors; // base class ke sare properties in programmer class
 };
 
 int main()

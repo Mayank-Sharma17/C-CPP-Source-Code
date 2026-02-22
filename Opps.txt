@@ -1,0 +1,56 @@
+History of C&CPP :-
+
+Simula is the first oop language (too slow) (thesis bjarne Stroustrup)
+Smalltalk is the first purely oop language
+BCPL (Basic combined programming language) fast
+Poblem of analyzing the UNIX Kernel with respect to distributed computing (kernel is a part of the os which directly controls the hardware)
+ken + denis --> working on Kernel
+ken -> B lang -> denis -> C 
+
+Stroustrup -> improve C + simula features (to make big softwares) --> initially called C with clases or new C --> Rick nameed it C++
+
+
+
+Difference :-
+
+C ---------------------------|------------------------CPP
+Procedure oriented lang       OO as well as Procedure (supports all pillers of oop)
+No concept of exception       it supports exception handling
+handling
+No type safe checking         Type safe checking
+Top down approach             Bottom up approach
+
+
+
+OOP :-
+
+programming paradigm (or model) based on the conecpt of Object
+Object (real word entities) -> which can contain data and code, instance of a class
+                               data in form of fields (or attributes or properties) and code in form of procedures (or methods)
+Class (category) -> is a description of an Object, class is a group of variables and functions
+
+ex : Person -- common noun (Class = variables + functions) 
+     Tanu   -- proper noun (objects of class p erson)
+     Manu
+
+*State of an object -> Set of properties value is called state of an object
+                       A class have 3 variables (a b c) and the object of this class O(1 2 3) this set of values of var is the state of object
+                       Any changes in the state (or behaviour of an object), can only be done via class functions (data security)
+
+*LISP is the second oldest high level language after (FORTRAN) which uses term object with properties
+*simula introduced important concepts that are today an essential part of OOP such as class and object, inheritence and dynamic binding
+
+essential ingridients of OOPs --> message passing, encapsulation, dynamic binding
+
+
+
+Key Principles of OOP :-
+
+Encapsulation (most imp)
+Data Hiding
+Abstraction
+inheritence
+Polymorphism
+
+*.cpp --> Build (preprocessor -> compiler -> linker) --> .exe
+
