@@ -54,3 +54,26 @@ Polymorphism
 
 *.cpp --> Build (preprocessor -> compiler -> linker) --> .exe
 
+
+-------------------------------------------------------------------------------------------------------------------
+
+Contructor and destructor in inheritance :-
+
+1. constructor in inheritance :-
+     constructor never inherits
+     agar child class ka object bane toh dono class ke constructor chale
+     child class constructor implicitly or explicitly invokes constructor of parent class
+
+     case 1:
+     
+     via initializer we can invoke the constructor of the parent class in a child class
+
+     case 3:
+          jab bhe by compiler banaega constructor in a child class toh vo bina argument wale constructor koe bhe call krega parent class ke !
+          if there doesn't exists any non-parameterized constructor in the parent class, then it is compulsory to create
+          a constructor in child class, and call it via initializer like B():A(5)
+
+2. destructor in inheritance :-
+     destructor never inherits
+     1:36:55
+    

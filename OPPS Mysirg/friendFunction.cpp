@@ -42,7 +42,7 @@ Item operator+(Item X, Item Y) {
     return temp;
 }
 
-// now define the function ourside the class without membership label, as it is not a member of the Item class, but it can be a member of another class.
+// now define the function outside the class without membership label, as it is not a member of the Item class, but it can be a member of another class.
 void f1(Item i) { // we need to pass the object to access the properties of the class, can't do it directly
     int c = i.a+i.b;
     cout<<"Sum is "<<c;
