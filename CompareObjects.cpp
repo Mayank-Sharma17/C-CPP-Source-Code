@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+// Application of this pointer --> comparing two objects
 class person {
     char name[20];
     float age;

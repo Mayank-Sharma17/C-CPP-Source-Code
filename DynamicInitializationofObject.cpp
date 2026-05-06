@@ -5,8 +5,8 @@ class fd {
     int years;
     float rate, r_val;
     public:
-        fd() {}
-        fd(long int a, int y, float r=0.12) {
+        fd() {} // default construtor
+        fd(long int a, int y, float r=0.12) { // default parameterized constructor
             amount = a;
             years = y;
             rate = r;
@@ -15,7 +15,7 @@ class fd {
                 r_val = r_val*(1.0 + (float)r/100);
             }
         }
-        fd(long int a, int y, int r) {
+        fd(long int a, int y, int r) { // parameterized comstructor
             amount = a;
             years = y;
             rate = r;

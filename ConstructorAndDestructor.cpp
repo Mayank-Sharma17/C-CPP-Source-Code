@@ -21,7 +21,7 @@ mca::~mca() {
 
 void create(void) {
     mca fifth(5, "local auto create");
-    static mca sixth(6, "local static create");
+    static mca sixth(6, "local static create"); // obj is created exactly once 
     mca seventh(7, "local auto create");
 }
 
